@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const api = "https://codeapi.ashutosh-sharma.com"
+// const api = "http://localhost:8000"
 
 export const addContent = async (data) => {
   try {

@@ -14,10 +14,6 @@ app.use(bodyParser.urlencoded({ limit: '100mb' , extended: true }));
 
 app.use('/uploads', express.static('uploads/'));
 
-
-
-
-
 // Import all routes
 app.use(routes);
 
@@ -29,6 +25,4 @@ ConnectDB();
 
 
 // Server is running at port 5000
-app.listen(8000,console.log(`Server is Started at Port : 8000`));
-
-
+app.listen();

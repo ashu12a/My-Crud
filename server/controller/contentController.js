@@ -33,7 +33,11 @@ const contentController = {
   async getAll(req, res, next) {
     try {
       const data = await Content.find();
-      res.status(200).json(data);
+      const filteredData = data.map((item)=>{
+        item['content']="";
+        return item;       
+      })
+      res.status(200).json(filteredData);
     } catch (error) {
       return next(error);
     }
